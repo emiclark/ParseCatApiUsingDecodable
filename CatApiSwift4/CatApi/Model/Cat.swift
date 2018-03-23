@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Cat {
+class Cat: Decodable {
     
     
     var title: String?

@@ -56,7 +56,7 @@ class MyTableViewController: UITableViewController {
         }).resume()
     
         cell.title.text = catds.Cats[indexPath.row].title
-        cell. .description.text = catds.Cats[indexPath.row].description
+        cell.catDescription.text = catds.Cats[indexPath.row].description
         return cell
     }    
 }
