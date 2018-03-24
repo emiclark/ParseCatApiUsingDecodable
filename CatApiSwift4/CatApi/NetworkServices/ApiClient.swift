@@ -12,28 +12,64 @@ class ApiClient {
     
     static var catsA = [Cat]()
 
+//    func getCoursesInfo() {
+    
     class func getData(completion: @escaping(Array<Any>)->()) {
-        let urlString = "https://chex-triplebyte.herokuapp.com/api/cats?page=1"
+        let jsonUrlString = "https://chex-triplebyte.herokuapp.com/api/cats?page=1"
+        guard let urlRequest = URL(string: jsonUrlString) else { return }
         
-        let urlConverted = URL(string: urlString)
-        
-        guard let url = urlConverted else {print("error in url"); return }
-        
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
+        URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
             
-            guard let data = data else { print("data nil"); return }
+            guard let data = data else { print("error- data is nil"); return }
+            print(data)
             
-            guard let cats = try? JSONDecoder().decode([Cat].self, from: data) else {print("decodable failed"); return }
-
-            DispatchQueue.main.async {
-                for cat in cats {
-                    print(cat.title, cat.description, cat.image_url)
-                }
-                completion(catsA)
+            do {
+                let catsArray =  try JSONDecoder().decode([Cat].self, from: data)
+//                print("\n [Cats]\n", websiteDescription.name as Any, websiteDescription.description as Any, websiteDescription.courses as Any )
+                
+                
+//                DispatchQueue.main.async {
+                    for cat in catsArray {
+                        print(cat.title, cat.description, cat.image_url)
+                    }
+                    completion(catsArray)
+//                }
+                
+            } catch {
+                print("error converting json")
             }
             
-        }.resume()
+            }.resume()
     }
+    
+ //==================================
+    
+    
+    
+    
+    
+//    class func getData(completion: @escaping(Array<Any>)->()) {
+//        let urlString = "https://chex-triplebyte.herokuapp.com/api/cats?page=1"
+//        
+//        let urlConverted = URL(string: urlString)
+//        
+//        guard let url = urlConverted else {print("error in url"); return }
+//        
+//        URLSession.shared.dataTask(with: url) { (data, response, error) in
+//            
+//            guard let data = data else { print("data nil"); return }
+//            
+//            guard let cats = try? JSONDecoder().decode([Cat].self, from: data) else {print("decodable failed"); return }
+//
+//            DispatchQueue.main.async {
+//                for cat in cats {
+//                    print(cat.title, cat.description, cat.image_url)
+//                }
+//                completion(catsA)
+//            }
+//            
+//        }.resume()
+//    }
 }
 
 //=========

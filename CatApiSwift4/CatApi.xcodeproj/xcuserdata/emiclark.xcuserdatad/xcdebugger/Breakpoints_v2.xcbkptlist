@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CatApi/View/MyTableViewController.swift"
-            timestampString = "543552760.955812"
+            timestampString = "543556633.671966"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "44"
@@ -25,46 +25,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CatApi/NetworkServices/ApiClient.swift"
-            timestampString = "543552760.955901"
+            filePath = "CatApi/View/MyTableViewController.swift"
+            timestampString = "543556633.672055"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "getData(completion:)"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "viewDidLoad()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__ObjC.URLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static CatApi.ApiClient.getData(completion: (Swift.Array&lt;Any&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "CatApi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/emiclark/SoftwareDevelopment/ParseCatApiUsingDecodable/CatApiSwift4/CatApi/NetworkServices/ApiClient.swift"
-                  timestampString = "543552761.03328"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "556">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in closure #1 (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__ObjC.URLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static CatApi.ApiClient.getData(completion: (Swift.Array&lt;Any&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "CatApi"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/emiclark/SoftwareDevelopment/ParseCatApiUsingDecodable/CatApiSwift4/CatApi/NetworkServices/ApiClient.swift"
-                  timestampString = "543552761.035709"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "33">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -73,13 +41,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CatApi/View/MyTableViewController.swift"
-            timestampString = "543552760.955981"
+            filePath = "CatApi/NetworkServices/ApiClient.swift"
+            timestampString = "543556633.672121"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "20"
-            endingLineNumber = "20"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "getData(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CatApi/NetworkServices/ApiClient.swift"
+            timestampString = "543556633.672473"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "getData(completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
