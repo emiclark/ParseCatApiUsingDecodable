@@ -2,4 +2,131 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CatApi/NetworkServices/ApiClient.swift"
+            timestampString = "543598926.039785"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "getData(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CatApi/NetworkServices/ApiClient.swift"
+            timestampString = "543598926.039871"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "getData(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CatApi/View/MyTableViewCell.swift"
+            timestampString = "543605975.661603"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CatApi.MyTableViewCell.__deallocating_deinit"
+                  moduleName = "CatApi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emiclark/SoftwareDevelopment/ParseCatApiUsingDecodable/CatApiSwift4/CatApi/View/MyTableViewCell.swift"
+                  timestampString = "543605625.1175931"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CatApi.MyTableViewCell.__allocating_init(style: __C.UITableViewCellStyle, reuseIdentifier: Swift.Optional&lt;Swift.String&gt;) -&gt; CatApi.MyTableViewCell"
+                  moduleName = "CatApi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emiclark/SoftwareDevelopment/ParseCatApiUsingDecodable/CatApiSwift4/CatApi/View/MyTableViewCell.swift"
+                  timestampString = "543605625.119422"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "13">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CatApi.MyTableViewCell.init(style: __C.UITableViewCellStyle, reuseIdentifier: Swift.Optional&lt;Swift.String&gt;) -&gt; CatApi.MyTableViewCell"
+                  moduleName = "CatApi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emiclark/SoftwareDevelopment/ParseCatApiUsingDecodable/CatApiSwift4/CatApi/View/MyTableViewCell.swift"
+                  timestampString = "543605625.121241"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "80">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CatApi.MyTableViewCell.__allocating_init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;CatApi.MyTableViewCell&gt;"
+                  moduleName = "CatApi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emiclark/SoftwareDevelopment/ParseCatApiUsingDecodable/CatApiSwift4/CatApi/View/MyTableViewCell.swift"
+                  timestampString = "543605625.123167"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CatApi.MyTableViewCell.init(coder: __ObjC.NSCoder) -&gt; Swift.Optional&lt;CatApi.MyTableViewCell&gt;"
+                  moduleName = "CatApi"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emiclark/SoftwareDevelopment/ParseCatApiUsingDecodable/CatApiSwift4/CatApi/View/MyTableViewCell.swift"
+                  timestampString = "543605625.125017"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "46">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
