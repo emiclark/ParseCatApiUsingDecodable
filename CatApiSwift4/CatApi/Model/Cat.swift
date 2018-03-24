@@ -20,7 +20,7 @@ class Cat: Decodable {
         let image_url = json["image_url"] as? String,
         let description = json["description"] as? String
             else {print("error creating object"); return }
-        
+
         self.title = title
         self.image_url = image_url
         self.description = description

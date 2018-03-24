@@ -64,6 +64,7 @@
 			children = (
 				008995362061E38300ED5EAF /* AppDelegate.swift */,
 				0089953A2061E38300ED5EAF /* Main.storyboard */,
+				0089954E2061EB6400ED5EAF /* CatDataStore.swift */,
 				00B8753E2062E64300472F87 /* Model */,
 				00B8753D2062E63800472F87 /* View */,
 				00B8753C2062E61900472F87 /* NetworkServices */,
@@ -77,7 +78,6 @@
 		00B8753C2062E61900472F87 /* NetworkServices */ = {
 			isa = PBXGroup;
 			children = (
-				0089954E2061EB6400ED5EAF /* CatDataStore.swift */,
 				008995482061E56600ED5EAF /* ApiClient.swift */,
 			);
 			path = NetworkServices;

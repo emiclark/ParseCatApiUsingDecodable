@@ -9,15 +9,17 @@
 import UIKit
 
 class MyTableViewController: UITableViewController {
-    let catds = CatDataStore()
-    
+    var catArray: [Cat]?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-//        catds.getCatData { (CatArray) in
 
         ApiClient.getData(completion: { (CatArray) in
-            print(CatArray)
+
             DispatchQueue.main.async {
+                print(CatArray)
+                self.catArray = ApiClient.catsA
+
                 self.tableView.reloadData()
             }
         })
@@ -34,13 +36,14 @@ class MyTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return catds.Cats.count
+//        return catArray?.count
+        return 10
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MyTableViewCell
         
-        let url = URL(string: catds.Cats[indexPath.row].image_url!)
+        let url = URL(string: self.catArray![indexPath.row].image_url!)
         
         // download images async
         URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
@@ -55,8 +58,8 @@ class MyTableViewController: UITableViewController {
             }
         }).resume()
     
-        cell.title.text = catds.Cats[indexPath.row].title
-        cell.catDescription.text = catds.Cats[indexPath.row].description
+        cell.title.text = self.catArray![indexPath.row].title
+        cell.catDescription.text = self.catArray![indexPath.row].description
         return cell
     }    
 }

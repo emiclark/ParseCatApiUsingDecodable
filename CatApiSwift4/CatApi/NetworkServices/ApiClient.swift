@@ -10,8 +10,8 @@ import Foundation
 
 class ApiClient {
     
-    static var cats = [Cat]()
-    
+    static var catsA = [Cat]()
+
     class func getData(completion: @escaping(Array<Any>)->()) {
         let urlString = "https://chex-triplebyte.herokuapp.com/api/cats?page=1"
         
@@ -24,8 +24,14 @@ class ApiClient {
             guard let data = data else { print("data nil"); return }
             
             guard let cats = try? JSONDecoder().decode([Cat].self, from: data) else {print("decodable failed"); return }
-            print(cats)
-            completion(cats)
+
+            DispatchQueue.main.async {
+                for cat in cats {
+                    print(cat.title, cat.description, cat.image_url)
+                }
+                completion(catsA)
+            }
+            
         }.resume()
     }
 }
