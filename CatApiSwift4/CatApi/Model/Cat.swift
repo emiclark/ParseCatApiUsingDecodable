@@ -8,15 +8,15 @@
 
 import Foundation
 
-struct Cats: Decodable {
-    var cats: [Cat]?
-}
-
-struct Cat: Decodable {
-    var title: String?
-    var image_url: String?
-    var description: String?
-}
+//struct Cats: Decodable {
+//    var cats: [Cat]?
+//}
+//
+//struct Cat: Decodable {
+//    var title: String?
+//    var image_url: String?
+//    var description: String?
+//}
 
 
 //class Cat: Decodable {
