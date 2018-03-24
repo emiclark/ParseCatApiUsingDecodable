@@ -12,7 +12,6 @@ class ApiClient {
     
     static var catsA = [Cat]()
 
-//    func getCoursesInfo() {
     
     class func getData(completion: @escaping(Array<Any>)->()) {
         let jsonUrlString = "https://chex-triplebyte.herokuapp.com/api/cats?page=1"
