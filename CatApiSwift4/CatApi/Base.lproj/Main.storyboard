@@ -60,10 +60,9 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="catDescription" destination="CBq-R7-mk5" id="9lI-u4-ioX"/>
-                                    <outlet property="catImage" destination="cVT-Qf-Dks" id="82o-pd-BaX"/>
-                                    <outlet property="description" destination="CBq-R7-mk5" id="6f6-9f-ZlM"/>
-                                    <outlet property="title" destination="x6s-hj-5eu" id="ppw-OO-bNw"/>
+                                    <outlet property="catDescription" destination="CBq-R7-mk5" id="CLi-pa-oja"/>
+                                    <outlet property="catImage" destination="cVT-Qf-Dks" id="ru5-Au-Mgk"/>
+                                    <outlet property="title" destination="x6s-hj-5eu" id="Pv8-p8-rBp"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

@@ -8,9 +8,9 @@
 
 import UIKit
 
-struct Cats: Decodable {
-    var cats: [Cat]?
-}
+//struct Cats: Decodable {
+//    var cats: [Cat]?
+//}
 
 struct Cat: Decodable {
     var title: String?
@@ -21,19 +21,23 @@ struct Cat: Decodable {
 //==========================================
 
 class MyTableViewController: UITableViewController {
-    var catArray: [Cat]?
+    var catArray = [Cat]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        getData(completion: { (CatArray) in
-            self.catArray = CatArray as? [Cat]
-            
-            DispatchQueue.main.async {
-                print(CatArray)
-                self.tableView.reloadData()
-            }
-        })
+        do {
+            try getData(completion: { (catArr) in
+                DispatchQueue.main.async {
+                    self.catArray.append(contentsOf: catArr)
+                    print(self.catArray)
+                    self.tableView.reloadData()
+                }
+            })
+        } catch let error {
+            print("error in getData")
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,14 +51,13 @@ class MyTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return catArray!.count
-//        return 10
+        return catArray.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MyTableViewCell
         
-        let url = URL(string: self.catArray![indexPath.row].image_url!)
+        let url = URL(string: self.catArray[indexPath.row].image_url!)
         
         // download images async
         URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
@@ -67,15 +70,15 @@ class MyTableViewController: UITableViewController {
             }
         }).resume()
     
-        cell.title.text = self.catArray![indexPath.row].title
-        cell.catDescription.text = self.catArray![indexPath.row].description
+        cell.title.text = self.catArray[indexPath.row].title
+        cell.catDescription.text = self.catArray[indexPath.row].description
         return cell
     }
     
     //======================================
     
     // get data
-    func getData(completion: @escaping(Array<Any>)->()) {
+    func getData(completion: @escaping([Cat])->()) throws {
         let jsonUrlString = "https://chex-triplebyte.herokuapp.com/api/cats?page=1"
         guard let urlRequest = URL(string: jsonUrlString) else { return }
         
@@ -85,14 +88,9 @@ class MyTableViewController: UITableViewController {
             print(data)
             
             do {
-                let catsArray =  try JSONDecoder().decode([Cat].self, from: data)
-                
-//                for cat in catsArray {
-//                    print(cat.title, cat.description, cat.image_url)
-//                }
-                completion(catsArray)
-            
-            } catch {
+                let catArr =  try JSONDecoder().decode([Cat].self, from: data)
+                completion(catArr)
+            } catch let error {
                 print("error converting json")
             }
             

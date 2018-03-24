@@ -11,9 +11,7 @@
 		0089953C2061E38300ED5EAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0089953A2061E38300ED5EAF /* Main.storyboard */; };
 		0089953E2061E38300ED5EAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0089953D2061E38300ED5EAF /* Assets.xcassets */; };
 		008995412061E38300ED5EAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0089953F2061E38300ED5EAF /* LaunchScreen.storyboard */; };
-		008995492061E56600ED5EAF /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008995482061E56600ED5EAF /* ApiClient.swift */; };
 		0089954B2061E73100ED5EAF /* MyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0089954A2061E73100ED5EAF /* MyTableViewController.swift */; };
-		0089954D2061E81600ED5EAF /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0089954C2061E81600ED5EAF /* Cat.swift */; };
 		0089954F2061EB6400ED5EAF /* CatDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0089954E2061EB6400ED5EAF /* CatDataStore.swift */; };
 		008995512061EE5200ED5EAF /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008995502061EE5200ED5EAF /* MyTableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -25,9 +23,7 @@
 		0089953D2061E38300ED5EAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		008995402061E38300ED5EAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		008995422061E38300ED5EAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		008995482061E56600ED5EAF /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		0089954A2061E73100ED5EAF /* MyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewController.swift; sourceTree = "<group>"; };
-		0089954C2061E81600ED5EAF /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
 		0089954E2061EB6400ED5EAF /* CatDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatDataStore.swift; sourceTree = "<group>"; };
 		008995502061EE5200ED5EAF /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,20 +63,11 @@
 				0089954E2061EB6400ED5EAF /* CatDataStore.swift */,
 				00B8753E2062E64300472F87 /* Model */,
 				00B8753D2062E63800472F87 /* View */,
-				00B8753C2062E61900472F87 /* NetworkServices */,
 				0089953D2061E38300ED5EAF /* Assets.xcassets */,
 				0089953F2061E38300ED5EAF /* LaunchScreen.storyboard */,
 				008995422061E38300ED5EAF /* Info.plist */,
 			);
 			path = CatApi;
-			sourceTree = "<group>";
-		};
-		00B8753C2062E61900472F87 /* NetworkServices */ = {
-			isa = PBXGroup;
-			children = (
-				008995482061E56600ED5EAF /* ApiClient.swift */,
-			);
-			path = NetworkServices;
 			sourceTree = "<group>";
 		};
 		00B8753D2062E63800472F87 /* View */ = {
@@ -95,7 +82,6 @@
 		00B8753E2062E64300472F87 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0089954C2061E81600ED5EAF /* Cat.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -172,11 +158,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0089954D2061E81600ED5EAF /* Cat.swift in Sources */,
 				008995372061E38300ED5EAF /* AppDelegate.swift in Sources */,
 				0089954F2061EB6400ED5EAF /* CatDataStore.swift in Sources */,
 				0089954B2061E73100ED5EAF /* MyTableViewController.swift in Sources */,
-				008995492061E56600ED5EAF /* ApiClient.swift in Sources */,
 				008995512061EE5200ED5EAF /* MyTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
