@@ -8,18 +8,6 @@
 
 import UIKit
 
-//struct Cats: Decodable {
-//    var cats: [Cat]?
-//}
-
-struct Cat: Decodable {
-    var title: String?
-    var image_url: String?
-    var description: String?
-}
-
-//==========================================
-
 class MyTableViewController: UITableViewController {
     var catArray = [Cat]()
 
@@ -27,14 +15,14 @@ class MyTableViewController: UITableViewController {
         super.viewDidLoad()
 
         do {
-            try getData(completion: { (catArr) in
+            try ApiClient.getData(completion: { (catArr) in
                 DispatchQueue.main.async {
                     self.catArray.append(contentsOf: catArr)
                     self.tableView.reloadData()
                 }
             })
         } catch let error {
-            print("error in getData")
+            print("error in getData - \(error)")
         }
         
     }
@@ -73,27 +61,4 @@ class MyTableViewController: UITableViewController {
         cell.catDescription.text = self.catArray[indexPath.row].description
         return cell
     }
-    
-    //======================================
-    
-    // get data
-    func getData(completion: @escaping([Cat])->()) throws {
-        let jsonUrlString = "https://chex-triplebyte.herokuapp.com/api/cats?page=1"
-        guard let urlRequest = URL(string: jsonUrlString) else { return }
-        
-        URLSession.shared.dataTask(with: urlRequest) { (data, response, error) in
-            
-            guard let data = data else { print("error- data is nil"); return }
-            print(data)
-            
-            do {
-                let catArr =  try JSONDecoder().decode([Cat].self, from: data)
-                completion(catArr)
-            } catch let error {
-                print("error converting json")
-            }
-            
-        }.resume()
-    }
-    
 }

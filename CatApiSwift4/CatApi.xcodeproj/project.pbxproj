@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		007D74E22066CAD8004F8BCB /* Cat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007D74E12066CAD8004F8BCB /* Cat.swift */; };
+		007D74E52066CB4B004F8BCB /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007D74E42066CB4B004F8BCB /* ApiClient.swift */; };
 		008995372061E38300ED5EAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 008995362061E38300ED5EAF /* AppDelegate.swift */; };
 		0089953C2061E38300ED5EAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0089953A2061E38300ED5EAF /* Main.storyboard */; };
 		0089953E2061E38300ED5EAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0089953D2061E38300ED5EAF /* Assets.xcassets */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		007D74E12066CAD8004F8BCB /* Cat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cat.swift; sourceTree = "<group>"; };
+		007D74E42066CB4B004F8BCB /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ApiClient.swift; path = CatApi/ApiClient.swift; sourceTree = SOURCE_ROOT; };
 		008995332061E38300ED5EAF /* CatApi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatApi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		008995362061E38300ED5EAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0089953B2061E38300ED5EAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -37,6 +41,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		007D74E32066CAE7004F8BCB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				007D74E12066CAD8004F8BCB /* Cat.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		0089952A2061E38300ED5EAF = {
 			isa = PBXGroup;
 			children = (
@@ -58,7 +70,9 @@
 			children = (
 				008995362061E38300ED5EAF /* AppDelegate.swift */,
 				0089953A2061E38300ED5EAF /* Main.storyboard */,
+				007D74E32066CAE7004F8BCB /* Model */,
 				00B8753D2062E63800472F87 /* View */,
+				007D74E42066CB4B004F8BCB /* ApiClient.swift */,
 				0089953D2061E38300ED5EAF /* Assets.xcassets */,
 				0089953F2061E38300ED5EAF /* LaunchScreen.storyboard */,
 				008995422061E38300ED5EAF /* Info.plist */,
@@ -147,9 +161,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				007D74E22066CAD8004F8BCB /* Cat.swift in Sources */,
 				008995372061E38300ED5EAF /* AppDelegate.swift in Sources */,
 				0089954B2061E73100ED5EAF /* MyTableViewController.swift in Sources */,
 				008995512061EE5200ED5EAF /* MyTableViewCell.swift in Sources */,
+				007D74E52066CB4B004F8BCB /* ApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
