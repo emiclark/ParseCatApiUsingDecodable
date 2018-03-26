@@ -26,7 +26,24 @@ class ApiClient {
                 print("error converting json - \(error.localizedDescription)")
             }
             
-            }.resume()
+        }.resume()
     }
+    
+    static func getDataWithPageNum(pageNum: Int, completion: @escaping([Cat])->()) throws {
+        let urlString = "https://chex-triplebyte.herokuapp.com/api/cats?page=\(pageNum)"
+        guard let url = URL(string:urlString) else {print("url unwrapping failed"); return }
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            guard let data = data else { print("data nil"); return }
+            
+                do {
+                    let cats = try JSONDecoder().decode([Cat].self, from: data)
+                    print("cats:\(cats)")
+                    completion(cats)
+                } catch let error {
+                    print(error.localizedDescription)
+                }
+        }.resume()
+    }
+
 }
 

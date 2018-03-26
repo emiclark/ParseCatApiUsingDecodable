@@ -10,7 +10,9 @@ import UIKit
 
 class MyTableViewController: UITableViewController {
     var catArray = [Cat]()
-
+    var pageNum = 1
+    var continuousScrollIndexPath = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -40,7 +42,29 @@ class MyTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return catArray.count
     }
-
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        if continuousScrollIndexPath != indexPath.row {
+            continuousScrollIndexPath = indexPath.row
+            let lastElement = catArray.count - 3
+            if indexPath.row == lastElement {
+                print("retrieving more images")
+                do {
+                    try ApiClient.getDataWithPageNum(pageNum: pageNum, completion: { (catArr) in
+                        DispatchQueue.main.async {
+                            self.catArray.append(contentsOf: catArr)
+                            self.tableView.reloadData()
+                        }
+                    })
+                } catch let error {
+                    print(error.localizedDescription)
+                }
+                pageNum += 1
+            }
+        }
+    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MyTableViewCell
         
